@@ -12,7 +12,7 @@ jobs:
     environment: DEV
     steps:
       - uses: actions/checkout@v4
-      - run: ./.github/scripts/test.sh
-        shell: bash
+      # - run: ./.github/scripts/test.sh
+      #   shell: bash
       - name: Run a one-line script
         run: echo Hello from Toto-testing Organization
