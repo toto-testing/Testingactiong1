@@ -28,4 +28,6 @@ jobs:
         with:
           name: file2
           path: downloaded-folder/file.txt
-      - run: cat downloaded-folder/file.txt
+      - run: |
+          ls -r
+          cat downloaded-folder/file.txt
