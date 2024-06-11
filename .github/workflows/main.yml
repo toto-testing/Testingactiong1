@@ -27,7 +27,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: file2
-          path: downloaded-folder/file.txt
+          path: downloaded-folder
       - run: |
           ls -r
-          cat /downloaded-folder/file.txt
+          cat downloaded-folder/file.txt
