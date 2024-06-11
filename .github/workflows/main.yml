@@ -29,5 +29,5 @@ jobs:
           name: file2
           path: downloaded-folder/file.txt
       - run: |
-          ls -r downloaded-folder
-          cat downloaded-folder/file.txt
+          ls -r
+          cat /downloaded-folder/file.txt
