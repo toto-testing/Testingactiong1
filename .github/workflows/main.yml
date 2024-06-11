@@ -15,7 +15,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: file2
-          path: ~/folder/
+          path: file.txt
 
   job_2:
     name: Download File
@@ -26,4 +26,4 @@ jobs:
         with:
           name: file2
           # path: ~/folder/file.txt
-      - run: cat ~/folder/file.txt
+      - run: cat file.txt
