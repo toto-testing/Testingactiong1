@@ -8,9 +8,6 @@
 name: Labeler
 on: 
   pull_request:
-    types:
-      - created
-      - edited
   pull_request_review:
 
 jobs:
@@ -22,5 +19,5 @@ jobs:
         uses: pullreminders/label-when-approved-action@master
         env:
           APPROVALS: "1"
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ADD_LABEL: "approved"
