@@ -13,7 +13,7 @@ jobs:
     steps:
       - run: | 
           mkdir folder
-          echo "Hello World" > /folder/file.txt
+          echo "Hello World" > folder/file.txt
       - uses: actions/upload-artifact@v2
         with:
           name: file2
