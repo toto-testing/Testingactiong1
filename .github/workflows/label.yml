@@ -6,7 +6,12 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on: ["pull_request_target", "pull_request_review"]
+on: 
+  pull_request:
+    types:
+      - created
+      - edited
+  pull_request_review:
 
 jobs:
   label:
