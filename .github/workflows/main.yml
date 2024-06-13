@@ -11,13 +11,11 @@ jobs:
     name: Upload File
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          mkdir folder
-          echo "Hello World" > folder/file.txt
+      - run: echo "Hello World" > file.txt
       - uses: actions/upload-artifact@v2
         with:
           name: file2
-          path: folder/file.txt
+          path: public/file.txt
 
   job_2:
     name: Download File
