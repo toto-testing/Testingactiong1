@@ -1,0 +1,21 @@
+name: print a message and build a docker
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  build:
+    name: Print welcome message and build docker
+    runs_on: ubuntu-latest
+    steps:
+      - name: write welcome message
+        run: echo "Welcome to this environment"
+      - uses: toto-testing/.github/workflows/build-docker.yml@188cf59
+        secrets:
+          registry_username: ${{ secrets.username }}
+          registry_password: ${{ secrets.password }}
