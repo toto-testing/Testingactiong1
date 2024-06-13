@@ -6,7 +6,12 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on: ["pull_request_target", "pull_request_review"]
+on: 
+  pull_request:
+    types:
+      - created
+      - edited
+  pull_request_review:
 
 jobs:
   label:
@@ -14,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Label when approved
-        uses: pullreminders/label-when-approved-action@main
+        uses: pullreminders/label-when-approved-action@master
         env:
           APPROVALS: "1"
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
