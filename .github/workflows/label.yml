@@ -11,7 +11,7 @@ on: ["pull_request_target", "pull_request_review"]
 jobs:
   label:
 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, windows, x64]
     steps:
       - name: Label when approved
         uses: pullreminders/label-when-approved-action@main
