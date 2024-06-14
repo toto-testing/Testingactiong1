@@ -9,7 +9,7 @@ on:
 jobs:
   job_1:
     name: Upload File
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, windows, x64]
     steps:
       - run: | 
           mkdir folder
